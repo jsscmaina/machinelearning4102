@@ -1,0 +1,20 @@
+Q1. In Nan values we replaced them with zero (0) for the purpose of int and float dytpes not to change to object dtype
+Q3. Percentage carried by the 2 pricipals is 10%
+Q4. To capture 90% more PCs would be needed. We cant write them since they increment by 1.
+	for example the 6 PCs still wont make 90%
+	pca = PCA(n_components=6)
+	pc_s = pca.fit_transform(X)
+	pca_data = pd.DataFrame(pc_s,columns=['PC1','PC2','PC3','PC4','PC5','PC6'])
+	#pca_data
+	final_data = pd.concat([pca_data,data[target]],axis=1)
+	final_data
+
+	
+	pca.explained_variance_ratio_
+	
+	array([0.07274969, 0.03288561, 0.0254348 , 0.0245182 , 0.01963031,
+       0.01817605])
+
+ 	from the example the Pcs have not reached 90% that means more are needed
+
+Q6. Z=w_1*X + w_2*Y + b
